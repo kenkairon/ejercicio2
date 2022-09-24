@@ -1,0 +1,21 @@
+<div class="container">
+    <p style="color: green"><%= notice %></p>
+
+    <h1>Noticia felices.com </h1>
+    <p>En esta página vas poder las noticias felices del momento,también podras agregar noticias felices</p>
+
+
+  <div id="noticia">
+    <% @noticia.each do |noticium| %>
+      <%= render noticium %>
+      <p>
+        <%= link_to "Show this noticium", noticium %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New noticium", new_noticium_path %>
+</div>
+<div class="container"> 
+    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Funciona el popover</button>
+</div>
